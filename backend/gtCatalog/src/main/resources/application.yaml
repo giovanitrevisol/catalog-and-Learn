@@ -1,0 +1,6 @@
+spring:
+  profiles:
+    active: "test"
+  jpa:
+    open-in-view: false
+    #garante que o JPA e fechado antes do retorno chegar na camada de resource. Add @transaction na service
