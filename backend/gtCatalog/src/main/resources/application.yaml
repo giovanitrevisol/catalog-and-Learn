@@ -4,3 +4,13 @@ spring:
   jpa:
     open-in-view: false
     #garante que o JPA e fechado antes do retorno chegar na camada de resource. Add @transaction na service
+
+  security:
+    oauth2:
+      client:
+        client-id: ${CLIENT_ID:gtcatalog}
+        client-secret: ${CLIENT_SECRET:gtcatalog123}
+
+jwt:
+  secret: ${JWT_SECRET:MY-JWT-SECRET}
+  duration: ${JWT_DURATION:86400}

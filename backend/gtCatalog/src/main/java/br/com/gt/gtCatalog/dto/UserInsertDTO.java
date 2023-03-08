@@ -1,17 +1,22 @@
 package br.com.gt.gtCatalog.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import br.com.gt.gtCatalog.services.validation.UserInsertValid;
 
-@AllArgsConstructor
-@NoArgsConstructor
-@Data
+@UserInsertValid
 public class UserInsertDTO extends UserDTO {
+	private static final long serialVersionUID = 1L;
 
 	private String password;
 
+	UserInsertDTO() {
+		super();
+	}
+	
+	public String getPassword() {
+		return password;
+	}
 
-
-
+	public void setPassword(String password) {
+		this.password = password;
+	}
 }
